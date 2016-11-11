@@ -1,0 +1,200 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>打地鼠</title>
+    <script src="jquery.js"></script>
+    <style>
+      body{
+          background-image: url(image/bg.jpg);
+          /*cursor:改变鼠标样式 
+          默认样式是auto,当自定义图片鼠标指针的
+          时候，浏览器害怕图片无法正常加载，
+          所以必须在图片路径之后加,auto，
+          当图片无法加载的时候，采用默认样式*/
+          cursor: url(image/cursor.png),auto;
+          /*兼容性写法，因为有的浏览器不支持这个
+          属性
+          谷歌和Safari浏览器内核：-webkit-
+          火狐浏览器内核：-moz-
+          欧鹏浏览器：-o-*/
+          -moz-user-select:none;
+      }
+      table{
+          width: 600px;
+          height: 600px;
+          /*border:1px solid #000;*/
+          /*margin:x;上下左右的外边距都是这个值
+          margin:x y;上下为x，左右为y
+          margin:x y z;x为上，y为左右，z为下
+          margin:a b c d;a为上，b为右，c为下
+          d为左
+          margin-方向 就表示这个方向上的外边距*/
+          /*定宽居中：1、必须是块级元素
+          2、必须有宽度*/
+          margin: 0 auto;
+      }
+      td{
+          width: 150px;
+          height: 150px;
+          background-image:url(image/hole.png);
+          /*一个是宽，一个是高*/
+          background-size: 120px 50px;
+          background-repeat:no-repeat;
+          /*背景的位置:水平方向上的，竖直方向上的*/
+          background-position: center bottom;
+          /*块级元素内的行内元素水平方向居中对齐*/
+          text-align:center;
+          /*竖直方向上靠下*/
+          vertical-align:bottom;
+      }
+      img{
+          width: 80px;
+          /*相对于元素本身进行定位*/
+          position:relative;
+          bottom:8px;
+          height:0;
+          animation-timing-function:linear;
+          /*让动画保持在结束时的状态*/
+          animation-fill-mode:both;
+      }
+      p{
+          /*rgb显示器三原色：red、green、blue
+          取值0~255 
+          a=alpha 表示透明度  默认为1 
+          取值0~1  为0时隐藏  */
+          background:rgba(10,10,10,0.5);
+          /*当元素设置绝对定位以后，会变成行内块
+          元素*/
+          position:absolute;
+          width: 150px;
+          height: 50px;
+          color:#fff;
+          text-align:center;
+          /*行高:文本在这个高度上竖直居中*/
+          line-height:50px;
+          font-size:30px;
+          left:0;
+          /*先上下，后左右 两个值
+          如果两个值一样的话，写一个值*/
+          border-top-right-radius:5px;
+          border-bottom-right-radius:5px;
+          /*border-radius:*/
+          
+      }
+      .up{
+          /*动画名称*/
+          animation-name:up;
+          /*动画时间*/
+          animation-duration:1s;
+          
+      }
+      @keyframes up {
+          0%{
+              height:0;
+          }
+          100%{
+              height:70px;
+          }
+      }
+      .down{
+        animation-name:down;
+        animation-duration:0.3s;
+      }
+      @keyframes down{
+          0%{
+              height:70px;
+          }
+          100%{
+              height:0;
+          }
+      }
+    </style>
+</head>
+<body>
+    <!--autoplay表示自动播放 loop表示循环
+    写在标签里边的都算标签的属性-->
+    <audio src="audio/music.mp3" autoplay loop></audio>
+    <audio id="dazhong"></audio>
+    <p id="score">得分：0</p>
+    <table>
+        <tr>
+            <!--alt表示当图片无法加载的时候，
+            alt里边的内容会呈现在页面上-->
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+        </tr>
+        <tr>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+        </tr>
+        <tr>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+        </tr>
+        <tr>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+            <td><img src="image/mouse.png" alt="地鼠"></td>
+        </tr>
+    </table>
+</body>
+</html>
+<script>
+    // 全局变量
+    var score = 0
+    // js获取HTML节点
+    // 对节点进行操作
+    // js获取HTML节点的方法
+    // document = HTML文档
+    // element = 节点、元素
+    // var im = document.getElementById('score')
+    // var p = $('#score')
+    var mouses = $('img')
+
+    function show(){
+        var a = Math.random() * 16
+        a = Math.floor(a)
+        var mouse = mouses.get(a)
+        // alert (mouse)
+        // 添加up类，删除down类
+        $(mouse).addClass('up').removeClass('down')
+        // 延迟多长时间执行
+        setTimeout(function (){
+            $(mouse).addClass('down').removeClass('up')
+        },2000)
+    }
+    
+    function play(){
+        show()
+        show()
+        show()
+        show()
+    }
+    // 每隔2s调用一下play函数
+    setInterval(play,2000)
+
+    $('img').click(function (){
+    //    .attr() 添加属性
+    //    <audio src="audio/dazhong.wav"></audio>
+       $('#dazhong').attr('src','audio/dazhong.wav').get(0).play()
+    //    让当前被点击的地鼠执行down动画
+       $(this).addClass('down').removeClass('up')
+       score += 10
+    //    score = score + 10
+    //    .innerText = 
+       $('#score').text('得分：'+ score)
+
+    })
+    $('body').mousedown(function (){
+        $('body').css('cursor','url(image/cursor-down.png),auto')
+    }).mouseup(function (){
+        $('body').css('cursor','url(image/cursor.png),auto')
+    })
+</script>
