@@ -1,0 +1,321 @@
+
+.top{
+    background-color:#75a749;
+}
+.main_top{
+    width:1150px;
+    margin:0 auto;
+    position:relative;
+}
+.logo{
+    display: inline-block;
+    margin:10px;
+}
+.rent{
+    position: absolute;
+    left: 255px;
+    top:10px;
+    width: 640px;
+    height: 40px;
+    background-color:#fff;
+    border-radius: 8px;
+}
+#box{
+    display: inline-block;
+}
+#shown{
+    display: inline-block;
+    width: 40px;
+    font-size:18px;
+    line-height: 40px;
+    margin:0 20px;
+    border-radius: 8px;
+}
+.sanjiao{
+    width:0;
+    height:0;
+    border-top:5px solid rgb(153,153,153);
+    border-right:5px solid rgba(153,153,153,0);
+    border-bottom:5px solid rgba(153,153,153,0);
+    border-left:5px solid rgba(153,153,153,0);
+    position: absolute;
+    left:65px;
+    top:18px;
+}
+#hidden{
+    display: none;
+    width: 80px;
+    position:absolute;
+    top:35px;
+    left:0;
+    background-color: #fff;
+    z-index: 1;
+}
+#hidden p{
+    font-size:18px;
+    line-height: 40px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.rent .put{
+    width: 400px;
+    font-size:16px;
+    padding:0 15px;
+    border:medium;
+}
+
+.rent .but{
+    width: 120px;
+    height: 41px;
+    border:medium;
+    font-size:18px;
+    color:#fff;
+    border-radius: 0 8px 8px 0;
+    background-color: #5b8239;
+    position: relative;
+}
+.rent .but img{
+    position: absolute;
+    margin-right:5px;
+    left:10px;
+    top:10px;
+}
+
+
+.header_main_ul{
+    float:right;
+}
+
+.header_main_ul a{
+    display:inline-block;
+    margin-top:24px;
+    font-size:14px;
+    color:#fff;
+}
+
+.header_main_ul a:hover{
+    color:#da3e3e;
+}
+
+.banner_top{
+    width:100%;
+    background-color:#eeeeee;
+    margin:20px 0;
+    border:1px solid #cccccc;
+}
+.banner_top span{
+    display:block;
+    width:1150px;
+    margin:0 auto;
+    font-size:14px;
+    line-height:32px;
+}
+
+.banner{
+    width:1150px;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+}
+
+.banner_bot{
+    overflow:hidden;
+}
+
+.banner_bot ul li{
+    float:left;
+    margin:10px 10px 0 0;
+}
+
+.banner_main{
+    position:absolute;
+    left:495px;
+    top:10px;
+}
+
+.banner_main_1{
+    display:block;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:38px;
+}
+
+.banner_main li{
+    font-size:14px;
+    line-height:36px;
+}
+.room{
+    position:absolute;
+    left: 290px;;
+    top: 120px;;
+}
+.rentway{
+    position:absolute;
+    left: 290px;;
+    top: 156px;;
+}
+.hlevel{
+    position:absolute;
+    left: 290px;;
+    top: 192px;;
+}
+
+
+.banner_main li a span{
+    font-size:22px;
+}
+
+.banner button{
+    width:296px;
+    height:70px;
+    font-size:20px;
+    color:#fff;
+    background-color:#75a749;
+    border-radius: 5px;
+    margin-left:30px;
+    position: absolute;
+    left:465px;
+    top:345px;
+    border:medium;
+}
+
+.banner button img{
+    position:absolute;
+    left:19px;
+    top:17px;
+}
+
+.banner_fx{
+    position:absolute;
+    right:178px;
+    top:365px;
+}
+
+.banner_fx span{
+    display:inline-block;
+    width:82px;
+    font-size:14px;
+    text-align: right;
+}
+.banner_fx img{
+    margin-right:6px;
+    vertical-align: -3px;
+}
+
+.banner_fx span:hover{
+    color:red;
+}
+
+
+.nav_set{
+    display:block;
+    font-size:16px;
+    font-weight:bold;
+    color:#333333;
+    margin:12px 0;
+}
+
+.nav ul{
+    margin-left:20px;
+    overflow:hidden;
+}
+
+.nav ul li{
+    float:left;
+    width:82px;
+    font-size:14px;
+    margin:20px 0;
+}
+
+.nav ul li img{
+    display:inline-block;
+    margin-right:10px;
+    vertical-align: -3px;
+}
+
+
+.map #map{
+    width:900px;
+    height:500px;
+    border:1px solid #cccccc;
+    margin:0 auto;
+    cursor: pointer;
+    /*overflow:hidden;*/
+}
+
+.tuijian{
+    overflow:hidden;
+}
+
+.tuijian ul{
+    float:left;
+    margin:20px 0 40px 25px;
+}
+
+.tuijian_li_1{
+    font-size:14px;
+    line-height: 30px;
+    font-weight:bold;
+    color:#333;
+}
+
+.tuijian_li_2{
+    font-size:12px;
+    line-height:26px;
+}
+
+.tuijian_li_3{
+    font-size:12px;
+    line-height:26px;
+}
+
+
+.foot{
+    width:100%;
+    height:100%;
+    background-color:#242623;
+}
+
+.foot_main{
+    width:1150px;
+    height:262px;
+    margin:0 auto;
+    position:relative;
+}
+.foot .foot_main a{
+    font-size:12px;
+    color:#fff;
+}
+.foot .foot_1 {
+    padding:43px 0 23px;
+    margin-right:11px;
+}
+.foot .foot_2{
+    margin-right:11px;
+    margin-bottom:50px;
+}
+.foot_bottom {
+    width:948px;
+    height:120px;
+    border-top:1px solid #444444;
+    color:#fff;
+    padding-bottom:12px;
+    padding-top:15px;
+}
+.foot_bottom p{
+    font-size:12px;
+    line-height:30px;
+}
+.erweima{
+    width:155px;
+    font-size:12px;
+    color:#fff;
+    text-align: center;
+    margin-top:1px;
+}
+.erweima{
+    display:block;
+    position:absolute;
+    right:0;
+    top:60px;
+}

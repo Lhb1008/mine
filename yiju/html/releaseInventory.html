@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>发布房源</title>
+    <link rel="stylesheet" href="../css/releaseInventory.css" />
+    <link rel="stylesheet" href="../css/默认样式.css">
+    </head>
+    <body>
+    <!---------弹出框-------->
+<div class="zhezhao">
+    <div class="zccg">
+    <p>X</p>
+    <span><s>√</s>房源发布成功</span>
+<b>返回</b> &nbsp;<a>继续发布>></a>
+</div>
+</div>
+    <div class="top">
+        <div class="main_top">
+            <img src="../img/logo.png" class="logo"/>
+            <div class="rent">
+                <div id="pox">
+                    <div id="shown">郑州</div>
+                    <em class="sanjiao"></em>
+                    <div id="hidden">
+                        <p>郑州</p>
+                        <p>安阳</p>
+                        <p>洛阳</p>
+                        <p>开封</p>
+                        <p>焦作</p>
+                        <p>鹤壁</p>
+                    </div>
+                </div>
+                <input type="text" placeholder="请输入小区名称/区域/厅室" class="put"/>
+                <button class="but">搜房源 <img src="../img/33.png"/></button>
+            </div>
+            <div class="header_main_ul">
+                <a href="###">登录</a>&nbsp;
+                <a href="###">注册</a>
+            </div>
+        </div>
+    </div>
+
+
+    <form action="">
+    <div class="heart">
+    <span class="heart_top">免费发布房源</span>
+    <div class="genre Infor">
+    <span class="Infor-top">类别和身份</span>
+    <ul>
+    <li class="genre-1">
+    <span><i>*</i>出租方式：</span>
+<input id="ZT" type="radio" name="kinds"/><label for="ZT">整套出租</label>
+    <input id="DJ" type="radio"  name="kinds"/><label for="DJ">单间出租</label>
+    <input id="CW" type="radio"  name="kinds"/><label for="CW">床位出租</label>
+    </li>
+    <li class="genre-2">
+    <span><i>*</i>身份：</span>
+<input id="GR" type="radio" name="people"/><label for="GR">个人</label>
+    <input id="JJR" type="radio"  name="people"/><label for="JJR">经纪人</label>
+    </li>
+    </ul>
+    </div>
+    <div class="basicInformation Infor">
+    <span class="Infor-top">基础信息</span>
+    <ul>
+    <li class="basicInformation_1">
+    <span><i>*</i>小区名称：</span>
+<input type="text" placeholder="请输入小区名称" id="villageName"/>
+    </li>
+    <li class="basicInformation_2">
+    <span><i>*</i>房屋类型：</span>
+<input type="text" placeholder="" id="Shi"/><a>室</a>
+    <input type="text" placeholder="" id="Ting"/><a>厅</a>
+    <input type="text" placeholder="" id="Wei"/><a>卫</a>
+    <input type="text" placeholder="" id="Area"/><a>㎡</a>
+</li>
+<li class="basicInformation_3">
+    <span><i>*</i>楼层：</span>
+<input type="text" placeholder="" id="floor"/><a class="di">第</a><a class="floor">层</a>
+    <input type="text" placeholder="" id="countfloor"/><a class="di">共</a><a class="floor">层</a>
+    </li>
+
+    <li class="basicInformation_4">
+    <span><i>*</i>朝向装修：</span>
+<select id="direction" class="select-1">
+    <option>朝向</option>
+    <option>东</option>
+    <option>西</option>
+    <option>南</option>
+    <option>北</option>
+    </select>
+    <select id="level" class="select-2">
+    <option>装修</option>
+    <option>精装修</option>
+    <option>中等装修</option>
+    <option>简装</option>
+    <option>毛坯</option>
+    </select>
+    </li>
+    <li class="basicInformation_5">
+    <span><i>*</i>租金&nbsp;&nbsp;&nbsp;</span>
+<input id="price" type="text" placeholder="面议/自行设定"/><a class="After">/月</a>
+    <select id="paymethod" class="fukuan">
+    <option>交付方式</option>
+    <option>押一付三</option>
+    <option>押一付一</option>
+    <option>半年付</option>
+    <option>一年付</option>
+    <option>押一付二</option>
+    <option>押二付二</option>
+    </select>
+    </li>
+    </ul>
+    </div>
+    <div class="detailedInformation Infor">
+    <ul>
+    <span class="Infor-top">详细信息</span>
+    <li class="detailedInformation_1">
+    <span><i>*</i>标题：</span>
+<input type="text" placeholder="8至30个字，不允许出现特殊字符"/>
+    </li>
+    <li class="detailedInformation_2">
+        <span><i>*</i>房屋配置：</span>
+        <input type="checkbox" name="configure" value="床" id="a"/><label for="a" class="checked2 text">床</label>
+        <input type="checkbox" name="configure" value="衣柜" id="b"/><label for="b" class="nn" value="衣柜">衣柜</label>
+        <input type="checkbox" name="configure" value="沙发" id="c"/><label for="c" class="nn">沙发</label>
+        <input type="checkbox" name="configure" value="书桌" id="d"/><label for="d" class="nn">书桌</label>
+        <input type="checkbox" name="configure" value="电视" id="e"/><label for="e" class="nn">电视</label>
+        <input type="checkbox" name="configure" value="冰箱" id="f"/><label for="f" class="nn">冰箱</label>
+        <input type="checkbox" name="configure" value="微波炉" id="g"/><label for="g" class="nn">微波炉</label>
+        <input type="checkbox" name="configure" value="电磁炉" id="h"/><label for="h" class="nn">电磁炉</label>
+        <span></span>
+        <input type="checkbox" name="configure" value="洗衣机" id="i"/><label for="i" class="nn">洗衣机</label>
+        <input type="checkbox" name="configure" value="空调" id="j"/><label for="j" class="nn">空调</label>
+        <input type="checkbox" name="configure" value="热水器" id="k"/><label for="k" class="nn">热水器</label>
+        <input type="checkbox" name="configure" value="宽带" id="l"/><label for="l" class="nn">宽带</label>
+        <input type="checkbox" name="configure" value="暖气" id="m"/><label for="m" class="nn">暖气</label>
+<!--        <a href="###" class="nn">床</a>
+        <a href="###">衣柜</a>
+        <a href="###">沙发</a>
+        <a href="###">书桌</a>
+        <a href="###">电视</a>
+        <a href="###">冰箱</a>
+        <a href="###">微波炉</a>
+        <a href="###">电磁炉</a>
+        <span></span>
+        <a href="###">洗衣机</a>
+        <a href="###">空调</a>
+        <a href="###">热水器</a>
+        <a href="###">宽带</a>
+        <a href="###">暖气</a>-->
+    </li>
+    <li class="detailedInformation_3">
+    <span><i>*</i>特色：</span>
+    <input id="" type="text" placeholder="请输入四个关键字，不同关键字之间用空格隔开"/>
+    </li>
+    <li class="detailedInformation_3">
+    <span><i>*</i>地址：</span>
+    <input type="text" placeholder="请正确输入地址"/>
+    </li>
+    </ul>
+    <div class="butSc">
+        <input type="button" value="上传图片" class="upload">
+        <input type="file" name="file" id="file1">
+    </div>
+    <div id="box"></div>
+    <p>只能上传房屋图片，不能包含文字、数字、网址、名片等，最多上传24张，每张最大10M</p>
+</div>
+<div class="otherInformation Infor">
+    <span class="Infor-top">其他信息</span>
+    <ul>
+    <li class="otherInformation-1">
+    <span><i>*</i>联系人：</span>
+<input id="linkman" type="text" placeholder="请填写联系人"/>
+    </li>
+    <li class="otherInformation-2">
+    <span><i>*</i>电话：</span>
+<input id="linkphone" type="text" placeholder="请正确填写号码"/>
+    </li>
+    </ul>
+    <input type="button" value="发布" class="release">
+    </div>
+    </div>
+    </form>
+    <div>
+    <div class="foot">
+    <div class="foot_main">
+    <div class="foot_1">
+    <a>友情链接 ：</a>
+<a href="###">武汉租房</a>
+    <a href="###">厨房电器品牌</a>
+    <a href="###">房展汇</a>
+    <a href="###">36搜房网</a>
+<a href="###">无锡二手车</a>
+    <a href="###">合肥房产网</a>
+    <a href="###">房产论坛</a>
+    <a href="###">租房问答</a>
+    <a href="###">郑州租房</a>
+    <a href="###">郑州房价</a>
+    <a href="###">好租</a>
+    </div>
+    <div class="foot_2">
+    <a href="###">武汉租房</a>
+    <a href="###">厨房电器品牌</a>
+    <a href="###">房景汇</a>
+    <a href="###">36搜房网</a>
+<a href="###">无锡二手车</a>
+    <a href="###">合肥房产网</a>
+    <a href="###">房产论坛</a>
+    <a href="###">租房问答</a>
+    <a href="###">郑州租房</a>
+    <a href="###">郑州房价</a>
+    <a href="###">好租</a>
+    </div>
+    <div class="foot_bottom">
+    <p>北京宜居房产经纪有限公司 | 许可经营证 京ICP备1564878945</p>
+<p>©Copyright©2010-2016宜居yiju.com版权所有</p>
+</div>
+<div class="erweima">
+    <img src="../img/22.jpg"/>
+    <span>扫一扫，马上租房</span>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" src="jquery-1.8.0.js"></script>
+    <script type="text/javascript" src="../js/ajaxfileupload1.js"></script>
+    <script type="text/javascript" src="../js/releaseInventory.js"></script>
+    </body>
+    </html>
+
